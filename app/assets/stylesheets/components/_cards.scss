@@ -2,10 +2,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  color: $white;
 }
 
 .cocktail-card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: $white;
+}
+
+.cocktail-description {
+  color: $white;
 }
