@@ -18,5 +18,6 @@ puts "creating yummy cocktails"
   url = open('https://www.thecocktaildb.com/api/json/v1/1/random.php').read
   parsed = JSON.parse(url)
   Cocktail.create!(name: parsed['drinks'].first['strDrink'])
+  puts "created #{Cocktail.last.name}!"
 end
 puts "created #{Cocktail.count} cocktails!"
