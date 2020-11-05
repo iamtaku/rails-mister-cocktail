@@ -5,13 +5,35 @@
   color: $white;
 }
 
+.cocktail-card {
+  border-radius: 8px;
+  background-color: $purple;
+
+  a {
+    color: $white;
+  }
+}
+
 .cocktail-card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: $white;
+  padding: 8px;
+  margin: 8px 0;
+
+  h1 {
+    text-decoration: underline;
+  }
 }
 
 .cocktail-description {
   color: $white;
+  padding: 8px;
+
+  p {
+    font-style: italic;
+  }
 }
+
+
