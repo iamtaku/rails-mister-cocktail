@@ -8,38 +8,18 @@
       Laborum quasi nihil velit, voluptatem. Consectetur officia ut numquam vitae obcaecati, odit quibusdam consequuntur, mollitia hic aperiam, itaque saepe placeat vero et voluptatibus. Sit consequuntur assumenda dignissimos cum repudiandae fugiat.</p>
     </div>
     <div class="cocktail-table-container">
-      <table class="">
-        <thead>
-          <tr>
-            <th>Amount</th>
-            <th>Ingredients</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @doses.each do |dose| %>
-            <tr>
-              <th><%= dose.description %></th>
-              <th><%= dose.ingredient.name %></th>
-              <th><%= link_to dose_path(dose), method: :delete, class: 'trash' do %>
-                <i class="far fa-trash-alt"></i>
-                <% end %>
-              </th>
-            </tr>
-            <% end %>
-        </tbody>
-      </table>
+      <%= render 'table' %>
       <div class="cocktail-dose-form">
         <%= simple_form_for([@cocktail,@dose]) do |f| %>
         <%= f.association :ingredient, include_blank: false, collection: @ingredients, input_html: { class: 'select2' } %>
         <%= f.input :description, label: 'amount?' %>
-        <div class="submit-center text-center">
-          <div class="small-3 columns">
-          <%= button_tag type: 'submit', class: "cocktail-btn" do %>
-        <i class="fas fa-plus-circle"></i>  <% end %>
+          <div class="submit-center text-center">
+            <div class="small-3 columns">
+              <%= button_tag type: 'submit', class: "cocktail-btn" do %>
+              <i class="fas fa-plus-circle"></i>  <% end %>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
       </div>
     <% end %>
     </div>

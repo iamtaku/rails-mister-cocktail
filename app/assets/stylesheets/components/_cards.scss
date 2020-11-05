@@ -1,16 +1,33 @@
 .cocktail-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 24px;
   color: $white;
 }
 
+.cocktail-card-body {
+  h5 {
+    text-align:center;
+  }
+}
+
 .cocktail-card {
+  background-color: transparent;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+  border: 4px solid $white;
+
   border-radius: 8px;
-  background-color: $purple;
+
+  h5 {
+    text-align: center;
+  }
 
   a {
     color: $white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: bolder;
   }
 }
 
@@ -21,9 +38,12 @@
   color: $white;
   padding: 8px;
   margin: 8px 0;
-
+  text-align:center;
   h1 {
     text-decoration: underline;
+  }
+  a {
+    text-decoration: none !important;
   }
 }
 
@@ -33,6 +53,18 @@
 
   p {
     font-style: italic;
+  }
+}
+
+.cocktail-card-ingredients {
+  padding: 8px;
+  margin-left: 8px;
+  font-size: 0.8em;
+  font-weight: lighter;
+  font-style: italic;
+  color: rgba(249, 249, 249,0.5);
+  i {
+    margin-right: 8px;
   }
 }
 
