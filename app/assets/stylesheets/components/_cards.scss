@@ -1,0 +1,11 @@
+.cocktail-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.cocktail-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
