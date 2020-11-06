@@ -4,7 +4,7 @@ module CocktailsHelper
     if cocktail.photo.attached?
       cl_image_path(cocktail.photo.key)
     else
-      ''
+      cocktail.img
     end
   end
 end

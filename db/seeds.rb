@@ -17,7 +17,7 @@ puts "creating yummy cocktails"
 20.times do
   url = open('https://www.thecocktaildb.com/api/json/v1/1/random.php').read
   parsed = JSON.parse(url)
-  Cocktail.create!(name: parsed['drinks'].first['strDrink'])
+  Cocktail.create!(name: parsed['drinks'].first['strDrink'], img: parsed['drinks'].first['strDrinkThumb'])
   puts "created #{Cocktail.last.name}!"
 end
 puts "created #{Cocktail.count} cocktails!"

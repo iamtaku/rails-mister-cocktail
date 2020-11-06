@@ -1,31 +1,35 @@
-  <div class="container">
-  <div class="cocktail-card-title">
-    <h1><%= @cocktail.name %></h1>
-  </div>
-  <div class="cocktails">
-    <div class="cocktail-img" style="background-image: url(<%= cocktail_background(@cocktail)%>)">
-
+<div class="container">
+    <div class="cocktail-card-title">
+      <h1><%= @cocktail.name %></h1>
     </div>
-    <div class="cocktail-table-container">
-      <%= render 'table' %>
-      <div class="cocktail-dose-form">
-        <%= simple_form_for([@cocktail,@dose]) do |f| %>
-        <%= f.association :ingredient, include_blank: false, collection: @ingredients, input_html: { class: 'select2' } %>
-        <%= f.input :description, label: 'amount?' %>
-          <div class="submit-center text-center">
-            <div class="small-3 columns">
-              <%= button_tag type: 'submit', class: "cocktail-btn" do %>
-              <i class="fas fa-plus-circle"></i>  <% end %>
+      <div class="cocktails">
+        <div class="cocktail-left">
+          <% if @cocktail.photo.attached? || @cocktail.img  %>
+              <div class="cocktail-img" style="background-image: url(<%= cocktail_background(@cocktail)%>) ">  </div>
+          <% end %>
+            <div class="cocktail-description">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, maiores, at? Mollitia, inventore, quaerat velit animi repudiandae hic optio ex tenetur placeat magni, quidem, esse accusantium porro odit ducimus et.
+              Laborum quasi nihil velit, voluptatem. Consectetur officia ut numquam vitae obcaecati, odit quibusdam consequuntur, mollitia hic aperiam, itaque saepe placeat vero et voluptatibus. Sit consequuntur assumenda dignissimos cum repudiandae fugiat.</p>
             </div>
+        </div>
+        <div class="cocktail-right">
+          <div class="cocktail-table-container">
+          <%= render 'table' %>
+          <div class="cocktail-dose-form">
+            <%= simple_form_for([@cocktail,@dose]) do |f| %>
+            <%= f.association :ingredient, include_blank: false, collection: @ingredients, input_html: { class: 'select2' }  %>
+            <%= f.input :description, label: 'amount?' %>
+              <div class="submit-center text-center">
+                <div class="small-3 columns">
+                  <%= button_tag type: 'submit', class: "cocktail-btn" do %>
+                  <i class="fas fa-plus-circle"></i>  <% end %>
+                </div>
+                </div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
-    <% end %>
-    <div class="cocktail-description">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, maiores, at? Mollitia, inventore, quaerat velit animi repudiandae hic optio ex tenetur placeat magni, quidem, esse accusantium porro odit ducimus et.
-      Laborum quasi nihil velit, voluptatem. Consectetur officia ut numquam vitae obcaecati, odit quibusdam consequuntur, mollitia hic aperiam, itaque saepe placeat vero et voluptatibus. Sit consequuntur assumenda dignissimos cum repudiandae fugiat.</p>
-    </div>
-    </div>
   </div>
 </div>
 

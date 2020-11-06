@@ -2,6 +2,7 @@ class DosesController < ApplicationController
   before_action :set_cocktail, only: [:create, :new]
   def new
     @dose = Dose.new
+    @ingredients = Ingredient.where.not(id: @cocktail.ingredients)
   end
 
   def create
@@ -10,8 +11,9 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      raise
+      @ingredients = Ingredient.where.not(id: @cocktail.ingredients)
       render :new
+
     end
   end
 

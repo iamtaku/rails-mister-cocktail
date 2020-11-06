@@ -7,11 +7,9 @@
   justify-items: center;
 }
 
-.cocktail-card-body {
-  h5 {
-    text-align:center;
+ p {
+    font-family: 'Open Sans', sans-serif;
   }
-}
 
 .cocktail-container {
   margin: 0 auto;
@@ -23,8 +21,13 @@
   box-shadow: 0 8px 16px rgba(0,0,0,0.9);
   border: 4px solid $white;
   border-radius: 8px;
-  height: 240px;
-  width: 400px;
+  height: 200px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
 
   h5 {
     text-align: center;
@@ -36,6 +39,12 @@
     margin: 0 auto;
     font-size: 2em;
     font-weight: bolder;
+    font-family: 'Abril Fatface', cursive;
+
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
   }
 }
 
@@ -57,6 +66,10 @@
 
 .cocktail-img {
   border-radius: 8px;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 16px;
+  background-size: auto 183%;
 }
 
 .cocktail-description {
@@ -69,9 +82,10 @@
 }
 
 .cocktail-card-ingredients {
-  padding: 8px;
+  padding: 8px 8px 0 8px;
   margin-left: 8px;
-  font-size: 0.8em;
+  margin-top: 16px;
+  font-size: 1em;
   font-weight: lighter;
   font-style: italic;
   color: rgba(249, 249, 249,0.5);
@@ -85,4 +99,8 @@
   }
 }
 
+.cocktail-left {
+  display: flex;
+  flex-direction: column;
+}
 

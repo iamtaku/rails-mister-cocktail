@@ -1,6 +1,6 @@
 .cocktail-btn, .cocktail-input {
-background: rgb(230,0,115);
-background: radial-gradient(circle, rgba(230,0,115,1) 15%, rgba(4,0,94,1) 100%);
+  background: rgb(230,0,115);
+  background: radial-gradient(circle, rgba(230,0,115,1) 15%, rgba(4,0,94,1) 100%);
   color: white;
   border-radius: 16px;
   margin: 0 8px;
@@ -8,9 +8,17 @@ background: radial-gradient(circle, rgba(230,0,115,1) 15%, rgba(4,0,94,1) 100%);
   text-align: center;
   border: none !important;
   transition: all 0.3s ease;
+  outline: none;
+  padding: 16px;
+  font-family: 'Open Sans', sans-serif;
 
-   &:hover {
+
+  &:hover {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  &:active {
+  border-style: outset;
   }
 }
 
