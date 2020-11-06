@@ -8,10 +8,10 @@
         </div>
         <div class="cocktail-card-ingredients">
           <p><i class="fas fa-flask"></i>
-            <% ingredients = cocktail.ingredients.first(3).map(&:name) %>
+            <% ingredients = cocktail.ingredients.first(2).map(&:name) %>
               <span><%= ingredients.join(', ') %></span>
-            <% if cocktail.ingredients.count > 3 %>
-              & <%= cocktail.ingredients.count - 3 %> others
+            <% if cocktail.ingredients.count > 2 %>
+              & <%= cocktail.ingredients.count - 2 %> others
             <% elsif cocktail.ingredients.count == 0 %>
                No doses added yet...
             <% end %>
