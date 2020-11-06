@@ -37,7 +37,7 @@
   align-items: center;
   color: $white;
   padding: 8px;
-  margin: 8px 0;
+  margin-top: 8px;
   text-align:center;
   h1 {
     text-decoration: underline;
@@ -65,6 +65,11 @@
   color: rgba(249, 249, 249,0.5);
   i {
     margin-right: 8px;
+    color: rgba(230, 0, 115,0.7);
+  }
+
+  span {
+    color: rgba(249, 249, 249,0.8);
   }
 }
 

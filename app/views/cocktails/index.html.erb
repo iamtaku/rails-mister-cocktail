@@ -1,6 +1,6 @@
 <div class="container">
 <h1>list of cocktails</h1>
-  <div class="cocktail-cards">
+  <div class="cocktail-cards mt-4">
     <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card">
       <div class="cocktail-card-body">
@@ -10,7 +10,7 @@
         <div class="cocktail-card-ingredients">
           <p><i class="fas fa-flask"></i>
             <% ingredients = cocktail.ingredients.first(3).map(&:name) %>
-              <%= ingredients.join(', ') %>
+              <span><%= ingredients.join(', ') %></span>
             <% if cocktail.ingredients.count > 3 %>
               & <%= cocktail.ingredients.count - 3 %> others
             <% elsif cocktail.ingredients.count == 0 %>
